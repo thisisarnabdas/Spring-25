@@ -1,0 +1,84 @@
+﻿Task 2
+# Terminal session with R1 through PC1
+
+1) enable
+2) erase startup-config
+3) reload
+4) no
+
+# Terminal session with R2 through PC2
+
+1) enable
+2) erase startup-config
+3) reload
+4) no
+
+Task 3 
+
+1) enable
+2) configure terminal 
+3) hostname R1
+4) no ip domain-lookup
+5) enable secret class
+6) banner motd &
+******************************** 
+!!!AUTHORIZED ACCESS ONLY!!! ******************************** &
+7) line console 0
+8) password cisco
+9) login
+10) exit
+11) line vty 0 4 
+12) password cisco
+13) login
+14) exit
+15) interface fastethernet 0/0
+16) ip address 192.168.1.1 255.255.255.0
+17) no shutdown
+18) interface serial 0/0/0
+19) ip address 192.168.2.1 255.255.255.0
+20) clock rate 64000
+21) no shutdown
+22) end
+23) copy run start
+
+Task 4
+
+24) line console 0
+25) password cisco
+26) login
+27) exit
+28) line vty 0 4 
+29) password cisco
+30) login
+31) exit
+32) interface serial 0/0/0
+33) ip address 192.168.2.2 255.255.255.0
+34) no shutdown
+35) clock rate 64000
+36) interface fastethernet 0/0
+37) ip address 192.168.3.1 255.255.255.0
+38) no shutdown
+39) end
+40) copy run start
+
+Task 6
+
+Router 1 
+
+41) cisco
+42) en
+43) class
+44) show ip route
+45) show ip interface brief
+46) exit
+
+Router 2
+
+47) cisco
+48) en
+49) class
+50) show ip route
+51) show ip interface brief
+51) exit
+
+
